@@ -57,10 +57,9 @@ public class BlockManager : Singleton<BlockManager>
         var obj = Instantiate(blockPrefab);
         obj.gameObject.SetActive(false);
         pooledObjects.Add(obj);
-        blockCounter++;
     }
 
-    public BlockController GetPooledObject() ///
+    public BlockController GetPooledObject() 
     {
         if (pooledObjects.Count<=0 )
         {
@@ -71,8 +70,8 @@ public class BlockManager : Singleton<BlockManager>
         obj.gameObject.SetActive(true);
         blocks.Add(obj);
         pooledObjects.Remove(obj);
-        blockCounter++; //))()(
-        if (blockCounter % 20 == 0 && blockCounter != 0)
+        blockCounter++; 
+        if (blockCounter % 10 == 0 && blockCounter != 0)
         {
             obj.SetDonut(true);
             blockCounter = 0;
@@ -81,7 +80,7 @@ public class BlockManager : Singleton<BlockManager>
        
     }
 
-     public void BlocksPoolStartPointCalculated() //
+     public void BlocksPoolStartPointCalculated() 
     {
         canBlockCheckable = false;
         Vector3 startedPoint = lastBlockPoint.transform.position;
@@ -121,8 +120,7 @@ public class BlockManager : Singleton<BlockManager>
         block.gameObject.SetActive(false);
         pooledObjects.Add(block);
         block.SetDonut(false);
-        //Alican(() => 3);
-        //Alican(Anil);
+        
 
         
     }

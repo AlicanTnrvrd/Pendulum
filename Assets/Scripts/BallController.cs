@@ -61,10 +61,6 @@ public class BallController : Singleton<BallController>
                 target = BlockManager.Instance.GetNearestBlock();
                 isTouching = true;
                 rb.useGravity = false;
-                
-                Debug.Log("sss");
-
-                
 
             }
 
@@ -145,7 +141,7 @@ public class BallController : Singleton<BallController>
 
     }
 
-    public void IncreaseScore(Collider other) //
+    public void IncreaseScore(Collider other) 
     {
         score += 5;
         var blockController = other.attachedRigidbody.GetComponent<BlockController>();

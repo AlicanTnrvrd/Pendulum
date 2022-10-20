@@ -65,6 +65,7 @@ public class BlockManager : Singleton<BlockManager>
         {
             CreateBlock();
         }
+        
 
         var obj = pooledObjects[0];
         obj.gameObject.SetActive(true);
@@ -129,16 +130,6 @@ public class BlockManager : Singleton<BlockManager>
     
 
 
-  //private int Anil()
-  //  {
-  //      return 3;
-  //  }
-
-
-  //  private void Alican(Func<int> rakam)
-  //  {
-
-  //      Debug.Log(rakam);
-  //  }
+  
     
 }
